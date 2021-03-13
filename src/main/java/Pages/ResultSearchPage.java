@@ -53,7 +53,6 @@ public class ResultSearchPage {
     }
 
     public void printPrinters(int quantity ) {
-
         List<WebElement> namePrint = driver.findElements(namePrintersLocator);
         List<WebElement> pricePrint = driver.findElements(pricePrintersLocator);
         for (int i = 0; i < quantity; i++) {
