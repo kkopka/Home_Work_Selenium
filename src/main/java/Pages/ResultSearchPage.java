@@ -40,22 +40,25 @@ public class ResultSearchPage {
        buttonShow.click();
     }
 
-    public void tuneFiltr() {
+    public WebElement tuneFiltr(String filtrName) {
         List<WebElement> arrayList = new ArrayList<WebElement>();
         Select filtr = new Select(driver.findElement(By.xpath("//div[@class='index-content-2lnSO']//select[@class='select-select-3CHiM']")));
         arrayList = filtr.getOptions();
+        WebElement filtrButton=null;
         for (WebElement parameter : arrayList) {
             if (parameter.getAttribute("text").equals("Дороже")) {
-                parameter.click();
+                filtrButton=parameter;
                 break;
             }
         }
+        return filtrButton;
     }
 
-    public void printPrinters() {
+    public void printPrinters(int quantity ) {
+
         List<WebElement> namePrint = driver.findElements(namePrintersLocator);
         List<WebElement> pricePrint = driver.findElements(pricePrintersLocator);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < quantity; i++) {
             System.out.println("Название принтера: " + namePrint.get(i).getAttribute("innerText") + " , его стоимость: " + pricePrint.get(i).getAttribute("innerText"));
         }
     }
