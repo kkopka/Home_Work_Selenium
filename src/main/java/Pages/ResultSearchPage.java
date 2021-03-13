@@ -57,7 +57,7 @@ public class ResultSearchPage {
         List<WebElement> namePrint = driver.findElements(namePrintersLocator);
         List<WebElement> pricePrint = driver.findElements(pricePrintersLocator);
         for (int i = 0; i < quantity; i++) {
-            System.out.println("Название принтера: " + namePrint.get(i).getAttribute("innerText") + " , его стоимость: " + pricePrint.get(i).getAttribute("innerText"));
+            System.out.println("Название товара: " + namePrint.get(i).getAttribute("innerText") + " , его стоимость: " + pricePrint.get(i).getAttribute("innerText"));
         }
     }
 
