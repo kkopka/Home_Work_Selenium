@@ -55,22 +55,10 @@ public class Office_equipment {
         writeField.sendKeys(city);
     }
 
-    public void selectFirstCity() {
-        city.click();
-    }
-
     public void show() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(buttonShowLocarot));
         buttonShow.click();
     }
 
-    public void pressKeys(String key) {
-        switch (key) {
-            case "Enter" :
-                writeField.sendKeys(Keys.ENTER);
-                break;
-        }
-
-    }
 
 }

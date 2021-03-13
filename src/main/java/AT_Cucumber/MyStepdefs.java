@@ -10,6 +10,7 @@ import io.cucumber.java.ru.Тогда;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyStepdefs {
@@ -26,10 +27,11 @@ public class MyStepdefs {
     }
 
     @ParameterType(".*")
+
     public WebElement category(String category) {
+
         return startedPage.category(category);
     }
-
 
     @И("в выпадающем списке категорий выбрана {category}")
     public void вВыпадающемСпискеКатегорийВыбранаОргтехника(WebElement category) {
@@ -50,12 +52,11 @@ public class MyStepdefs {
     @Тогда("в поле регион введено значение {string}")
     public void вПолеРегионВведеноЗначениеВладивосток(String city) {
         office_equipment.writeField(city);
-       // office_equipment.selectFirstCity();
-        office_equipment.pressKeys("Enter");
     }
 
     @И("нажата кнопка показать объявления")
-    public void нажатаКнопкаПоказатьОбъявления() {
+    public void нажатаКнопкаПоказатьОбъявления() throws InterruptedException {
+        Thread.sleep(500);
         office_equipment.show();
     }
 
@@ -65,7 +66,7 @@ public class MyStepdefs {
     }
 
     @И("активирован чекбокс только с фотографией")
-    public void активированЧекбоксТолькоСФотографией() {
+    public void активированЧекбоксТолькоСФотографией() throws InterruptedException {
         resultSearchPage.selectChexBox();
     }
 
@@ -75,12 +76,17 @@ public class MyStepdefs {
     }
 
     @И("в выпадающем списке сортировка выбрано значение {filtr}")
-    public void вВыпадающемСпискеСортировкаВыбраноЗначениеДороже(WebElement webElement) {
+    public void  вВыпадающемСпискеСортировкаВыбраноЗначениеДороже(WebElement webElement) {
         webElement.click();
     }
 
     @И("в консоль выведено значение название и цены {int} первых товаров")
     public void вКонсольВыведеноЗначениеНазваниеИЦеныПервыхТоваров(int quantity) {
         resultSearchPage.printPrinters(quantity);
+    }
+
+    @И("нажать на кнопку показать объявления")
+    public void нажатьНаКнопкуПоказатьОбъявления() {
+        resultSearchPage.clickButtonShow();
     }
 }

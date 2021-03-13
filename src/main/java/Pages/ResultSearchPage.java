@@ -21,7 +21,7 @@ public class ResultSearchPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//div[@data-marker='fieldset/d']//input[@type='checkbox']")
+    @FindBy(xpath = "//input[@name='withImagesOnly']")
     private WebElement checkBox;
     @FindBy(xpath = "//button[@data-marker='search-filters/submit-button']")
     private WebElement buttonShow;
@@ -30,9 +30,7 @@ public class ResultSearchPage {
 
     public void selectChexBox()  {
         if (!checkBox.isSelected()){
-            WebElement element = driver.findElement(By.xpath("//div[@data-marker='fieldset/d']//input[@type='checkbox']"));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-            driver.findElement(By.xpath("//div[@data-marker='fieldset/d']//label")).click();
+            driver.findElement(By.xpath("//label[@class='checkbox-checkbox-7igZ6 checkbox-size-s-yHrZq']")).click();
         }
     }
 
