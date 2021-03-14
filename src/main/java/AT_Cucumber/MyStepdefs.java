@@ -48,7 +48,7 @@ public class MyStepdefs {
         category.click();
     }
 
-    @Step("Вводим значение в поле поиска {name}")
+
     @И("в поле поиска введено значение {string}")
     public void вПолеПоискаВведеноЗначениеПринтер(String name) {
         office_equipment = new Office_equipment(driver, wait);
