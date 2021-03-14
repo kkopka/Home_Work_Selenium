@@ -3,7 +3,7 @@
   <component name="ListenersConfig">
     <option name="listeners">
       <list>
-        <option value="io.qameta.allure.junit5.AllureJunit5" />
+        <option value="io.qameta.allure.junit4.AllureJunit4" />
       </list>
     </option>
   </component>

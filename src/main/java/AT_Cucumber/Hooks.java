@@ -9,9 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
-    public ChromeDriver driver;
-    public WebDriverWait wait;
-
 
     @Before
     public void setup() {
@@ -22,7 +19,7 @@ public class Hooks {
         MyStepdefs.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     }
 
- /*   @After
+   @After
     public void close() {
         try {
             Thread.sleep(5000);
@@ -30,5 +27,5 @@ public class Hooks {
             e.printStackTrace();
         }
         MyStepdefs.driver.close();
-    }*/
+    }
 }
