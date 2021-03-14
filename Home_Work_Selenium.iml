@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="ListenersConfig">
-    <option name="listeners">
-      <list>
-        <option value="io.qameta.allure.junit4.AllureJunit4" />
-      </list>
-    </option>
-  </component>
-</module>
+<module type="JAVA_MODULE" version="4" />
