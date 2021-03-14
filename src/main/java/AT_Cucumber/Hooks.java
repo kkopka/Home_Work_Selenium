@@ -22,7 +22,7 @@ public class Hooks {
         MyStepdefs.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     }
 
- /*   @After
+     @After
     public void close() {
         try {
             Thread.sleep(5000);
@@ -30,5 +30,5 @@ public class Hooks {
             e.printStackTrace();
         }
         MyStepdefs.driver.close();
-    }*/
+    }
 }
