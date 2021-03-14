@@ -36,7 +36,7 @@ public class MyStepdefs {
     public void открытРесурсАвито() {
         startedPage = new StartedPage(driver);
         startedPage.openPage();
-        screenshot();
+       screenshot();
     }
 
     @ParameterType(".*")
