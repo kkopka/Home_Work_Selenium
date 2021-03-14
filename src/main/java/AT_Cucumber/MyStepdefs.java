@@ -1,4 +1,5 @@
 package AT_Cucumber;
+
 import Enums.Categories;
 import Pages.Office_equipment;
 import Pages.ResultSearchPage;
@@ -25,9 +26,9 @@ public class MyStepdefs {
     Office_equipment office_equipment;
     ResultSearchPage resultSearchPage = new ResultSearchPage(driver);
 
-    @AfterStep
-    public void screenshot(){
-        Allure.addAttachment("Скришот",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
+
+    public void screenshot() {
+        Allure.addAttachment("Скришот", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
     }
 
 
@@ -35,6 +36,7 @@ public class MyStepdefs {
     public void открытРесурсАвито() {
         startedPage = new StartedPage(driver);
         startedPage.openPage();
+        screenshot();
     }
 
     @ParameterType(".*")
@@ -46,6 +48,7 @@ public class MyStepdefs {
     @И("в выпадающем списке категорий выбрана {category}")
     public void вВыпадающемСпискеКатегорийВыбранаОргтехника(WebElement category) {
         category.click();
+        screenshot();
     }
 
 
@@ -53,19 +56,21 @@ public class MyStepdefs {
     public void вПолеПоискаВведеноЗначениеПринтер(String name) {
         office_equipment = new Office_equipment(driver, wait);
         office_equipment.writePrinter(name);
+        screenshot();
     }
-
 
 
     @Тогда("кликнуть по выпадающему списку региона")
     public void кликнутьПоВыпадающемуСпискуРегиона() {
         office_equipment.clickChoseCity();
+        screenshot();
     }
 
 
     @Тогда("в поле регион введено значение {string}")
     public void вПолеРегионВведеноЗначениеВладивосток(String city) {
         office_equipment.writeField(city);
+        screenshot();
     }
 
 
@@ -73,18 +78,21 @@ public class MyStepdefs {
     public void нажатаКнопкаПоказатьОбъявления() throws InterruptedException {
         Thread.sleep(500);
         office_equipment.show();
+        screenshot();
     }
 
 
     @Тогда("открылась страница результаты по запросу принтер")
     public void открыласьСтраницаРезультатыПоЗапросуПринтер() {
         System.out.println(driver.getTitle());
+        screenshot();
     }
 
     @Step("Активировали чебокс только с фотографией")
     @И("активирован чекбокс только с фотографией")
     public void активированЧекбоксТолькоСФотографией() throws InterruptedException {
         resultSearchPage.selectChexBox();
+        screenshot();
     }
 
     @ParameterType(".*")
@@ -94,18 +102,21 @@ public class MyStepdefs {
 
 
     @И("в выпадающем списке сортировка выбрано значение {filtr}")
-    public void  вВыпадающемСпискеСортировкаВыбраноЗначениеДороже(WebElement webElement) {
+    public void вВыпадающемСпискеСортировкаВыбраноЗначениеДороже(WebElement webElement) {
         webElement.click();
+        screenshot();
     }
 
     @И("в консоль выведено значение название и цены {string} первых товаров")
     public void вКонсольВыведеноЗначениеНазваниеИЦеныПервыхТоваров(String quantity) {
         resultSearchPage.printPrinters(Integer.parseInt(quantity));
+        screenshot();
     }
 
 
     @И("нажать на кнопку показать объявления")
     public void нажатьНаКнопкуПоказатьОбъявления() {
         resultSearchPage.clickButtonShow();
+        screenshot();
     }
 }
