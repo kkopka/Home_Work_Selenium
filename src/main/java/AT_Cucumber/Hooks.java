@@ -26,11 +26,6 @@ public class Hooks {
 
    @After
     public void close() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         MyStepdefs.driver.close();
     }
 }
