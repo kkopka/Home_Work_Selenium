@@ -4,7 +4,6 @@ import Enums.Categories;
 import Pages.Office_equipment;
 import Pages.ResultSearchPage;
 import Pages.StartedPage;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Пусть;

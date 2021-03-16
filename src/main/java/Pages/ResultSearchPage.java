@@ -23,7 +23,7 @@ public class ResultSearchPage {
 
     @FindBy(xpath = "//input[@name='withImagesOnly']")
     private WebElement checkBox;
-    @FindBy(xpath = "//button[@data-marker='search-filters/submit-button']")
+    @FindBy(xpath = "//button[@class='button-button-2Fo5k button-size-s-3-rn6 button-primary-1RhOG width-width-12-2VZLz']")
     private WebElement buttonShow;
     private By namePrintersLocator = By.xpath("//h3[@itemprop='name']");
     private By pricePrintersLocator = By.xpath("//div[@class='iva-item-priceStep-2qRpg']");

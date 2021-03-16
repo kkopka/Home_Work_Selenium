@@ -5,13 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class StartedPage {
 
     private WebDriver driver;
+
     private List<WebElement> arrayList = new ArrayList<WebElement>();
 
     public StartedPage(WebDriver driver) {
