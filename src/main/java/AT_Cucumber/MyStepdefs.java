@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 import java.io.ByteArrayInputStream;
 
 
@@ -24,6 +25,7 @@ public class MyStepdefs {
     StartedPage startedPage;
     Office_equipment office_equipment;
     ResultSearchPage resultSearchPage = new ResultSearchPage(driver);
+
 
 
     public void screenshot() {
