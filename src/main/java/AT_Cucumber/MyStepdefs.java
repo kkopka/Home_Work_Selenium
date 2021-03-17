@@ -45,7 +45,6 @@ public class MyStepdefs {
         return startedPage.category(Categories.valueOf(category).getValue());
     }
 
-
     @И("в выпадающем списке категорий выбрана {category}")
     public void вВыпадающемСпискеКатегорийВыбранаОргтехника(WebElement category) {
         category.click();
