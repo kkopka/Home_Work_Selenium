@@ -3,7 +3,6 @@ package AT_Cucumber;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.qameta.allure.Step;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,7 +14,7 @@ public class Hooks {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\bin\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         MyStepdefs.driver=new ChromeDriver();
         MyStepdefs.wait=new WebDriverWait(MyStepdefs.driver, 10);
         MyStepdefs.driver.manage().window().maximize();
